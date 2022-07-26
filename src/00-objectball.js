@@ -115,7 +115,6 @@ function gameObject() {
     }
 }
 
-console.log(gameObject())
 
 // function homeTeam() {
 //   return gameObject().home
@@ -157,4 +156,10 @@ function teamColors (teamName) {
   }
 }
 
-function teamNames
+function teamNames (gameKey) {
+  const game = gameObject()
+  for (const gameKey in game) {
+    return game[gameKey].teamName
+  }
+}
+
